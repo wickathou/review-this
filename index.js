@@ -1,3 +1,6 @@
+// Classes
+
+// Individual task 
 class Task {
   constructor(task) {
     this.description = task;
@@ -6,6 +9,7 @@ class Task {
   }
 }
 
+// Methods to modify tasks and DOM 
 class Tasks {
   constructor(insertElement) {
     this.tasks = [];
@@ -144,6 +148,8 @@ class Tasks {
   }
 }
 
+// Non-class dependant functions to clear all completed tasks and to add tasks
+
 const clearAll = (element, taskList, taskListDom) => {
   element.addEventListener('click', (e) => {
     e.preventDefault();
@@ -161,6 +167,8 @@ const newTask = (inputRegex, element, taskList, taskListDom) => {
     }
   });
 };
+
+// Entry code, connected directly to HTML file 
 
 const inputRegex = /^\S/;
 const taskListDom = document.getElementById('task-list');
